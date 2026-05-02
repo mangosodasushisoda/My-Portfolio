@@ -1,0 +1,614 @@
+/* PF Portfolio — Cherry accent, readable JP typography */
+:root {
+  --bg: #0c0e12;
+  --bg-elevated: #141820;
+  --surface: #1a1f2a;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e8eaef;
+  --muted: #8b93a5;
+  --accent: #e85d6f;
+  --accent-soft: rgba(232, 93, 111, 0.15);
+  --link: #7eb8da;
+  --radius: 12px;
+  --font: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", "Consolas", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 120% 80% at 50% -20%, rgba(232, 93, 111, 0.12), transparent),
+    radial-gradient(ellipse 80% 50% at 100% 50%, rgba(126, 184, 218, 0.06), transparent);
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  z-index: 1000;
+  border-radius: 4px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(12px);
+  background: rgba(12, 14, 18, 0.85);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  justify-content: flex-end;
+}
+
+.nav a {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+.intro-block {
+  scroll-margin-top: 72px;
+  margin-bottom: 2.5rem;
+  padding: 2rem 2rem 2.25rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.intro-block h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.intro-block p {
+  margin: 0 0 0.85rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.intro-block p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-block .intro-profile {
+  font-size: 1.05rem;
+  color: var(--muted);
+}
+
+.cards-heading {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.cards-intro {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.scratch-embed {
+  position: relative;
+  margin: 0 auto 1.5rem;
+  max-width: 485px;
+  width: 100%;
+  aspect-ratio: 485 / 402;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #000;
+}
+
+.scratch-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem 0 3rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(232, 93, 111, 0.45);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.card__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+section.project {
+  scroll-margin-top: 72px;
+  margin-bottom: 3.5rem;
+  padding: 2rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+section.project:last-of-type {
+  margin-bottom: 0;
+}
+
+.project__era {
+  margin: 0 0 0.65rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.project__header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.project__header h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+.disclaimer {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--muted);
+  background: var(--accent-soft);
+  border-radius: 8px;
+  border-left: 3px solid var(--accent);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.lead {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.project h3 {
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.project h4 {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.project p {
+  margin: 0 0 1rem;
+}
+
+.project ul {
+  margin: 0 0 1rem;
+  padding-left: 1.25rem;
+}
+
+.project li {
+  margin-bottom: 0.35rem;
+}
+
+.project li ul {
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+th,
+td {
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  border: 1px solid var(--border);
+}
+
+th {
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: 600;
+  width: 28%;
+}
+
+td code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: #b8c5d6;
+}
+
+.footnote {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.file-protocol-banner {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: linear-gradient(135deg, rgba(180, 60, 70, 0.35), rgba(40, 24, 28, 0.95));
+  border-bottom: 1px solid rgba(232, 93, 111, 0.5);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.file-protocol-banner strong {
+  color: #ffb4bc;
+}
+
+.file-protocol-banner code {
+  font-family: var(--mono);
+  font-size: 0.82em;
+  padding: 0.15em 0.4em;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 4px;
+}
+
+.file-protocol-banner a {
+  color: #b8e0ff;
+}
+
+.unity-embed-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--muted);
+  background: radial-gradient(ellipse at center, rgba(30, 36, 48, 0.98), #080a0d);
+}
+
+.unity-embed-placeholder code {
+  font-family: var(--mono);
+  font-size: 0.8em;
+}
+
+.unity-embed-placeholder a {
+  color: var(--link);
+}
+
+.embed-note {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.embed-note code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+}
+
+.project-cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.btn-project {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font);
+  color: var(--bg);
+  background: linear-gradient(135deg, var(--accent), #c94d5e);
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 12px rgba(232, 93, 111, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-project:hover {
+  color: var(--bg);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(232, 93, 111, 0.35);
+}
+
+.btn-project--ghost {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(232, 93, 111, 0.55);
+  box-shadow: none;
+}
+
+.btn-project--ghost:hover {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: rgba(232, 93, 111, 0.75);
+  box-shadow: none;
+}
+
+.project-cta__secondary {
+  font-size: 0.875rem;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.project-cta__secondary:hover {
+  text-decoration: underline;
+}
+
+.project-steps {
+  margin: 0 0 1.35rem;
+  padding-left: 1.35rem;
+  line-height: 1.65;
+}
+
+.project-steps li {
+  margin-bottom: 0.55rem;
+}
+
+.project-steps li::marker {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.project-cautions {
+  margin: 0 0 1.35rem;
+  padding-left: 1.25rem;
+  line-height: 1.65;
+}
+
+.project-cautions li {
+  margin-bottom: 0.5rem;
+}
+
+kbd {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  padding: 0.12em 0.45em;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.folder-tree {
+  margin: 1rem 0 1.25rem;
+  padding: 1rem 1.25rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #c5cdd8;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.unity-embed {
+  position: relative;
+  margin: 0 auto 1.5rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0a0c10;
+  /* 幅はビューポートと高さの上限から決め、極端に横長・縦長にならないようにする */
+  width: min(100%, 900px, calc(72vh * 1366 / 768));
+  max-width: 100%;
+}
+
+.unity-embed--cherry {
+  /* ゲーム 1366×768 + Unity テンプレのフッター帯。縦を足りなくすると iframe 内がクリップされやすい */
+  width: min(100%, 900px, calc(72vh * 1366 / 810));
+  aspect-ratio: 1366 / 810;
+}
+
+.unity-embed--mouhitotu {
+  width: min(100%, 900px, calc(70vh * 960 / 642));
+  aspect-ratio: 960 / 642;
+}
+
+.unity-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.embed-actions {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.875rem;
+}
+
+.embed-actions a {
+  color: var(--link);
+}
+
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+.site-footer__meta {
+  margin: 0.75rem 0 0;
+  font-size: 0.78rem;
+}
+
+.site-footer__meta a {
+  color: var(--muted);
+}
+
+.site-footer__meta a:hover {
+  color: var(--link);
+}
+
+@media (max-width: 600px) {
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    border-bottom: none;
+  }
+}

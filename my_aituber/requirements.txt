@@ -1,0 +1,2 @@
+pyvts>=0.3.3
+requests>=2.28.0

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pRonptAI editor v2</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <script src="./js/runner-bridge.js"></script>
+  <div class="app">
+    <aside class="panel chat-panel">
+      <h2>AIコーチ</h2>
+      <div id="chatLog" class="chat-log"></div>
+      <textarea id="chatInput" placeholder="質問ややりたいことを入力（Enterで送信 / Shift+Enterで改行）"></textarea>
+      <div class="hint">
+        AIは「次の1手」と「最小差分」を返します。糖衣構文: ずっと{…}・もし(…)・抜ける; など（runnerがJSに変換）
+      </div>
+    </aside>
+
+    <main class="panel editor-panel">
+      <div class="editor-header">
+        <h1>pRonptAI / Block Breaker Lab</h1>
+        <div class="controls">
+          <button id="templateButton">テンプレ読み込み</button>
+          <button id="runButton">実行</button>
+          <button id="stopButton">停止</button>
+          <button id="askButton">AIに相談</button>
+        </div>
+      </div>
+      <textarea id="codeEditor" spellcheck="false"></textarea>
+      <pre id="outputLog" class="output-log"></pre>
+    </main>
+
+    <section class="panel stage-panel">
+      <h2>ステージ</h2>
+      <iframe
+        id="runnerFrame"
+        title="sandbox"
+        src="./js/sandbox/runner.html"
+        sandbox="allow-scripts allow-same-origin"
+      ></iframe>
+      <div class="small">
+        実行はiframe内で隔離されます。
+      </div>
+    </section>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

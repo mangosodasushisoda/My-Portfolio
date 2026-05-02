@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PF — Portfolio</title>
+  <meta name="description" content="自己紹介、Scratch 作品、CherryJumping、my_os、ひよりAI、Juicy Puncher、pRomptAI などのポートフォリオ" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="logo" href="#">PF</a>
+      <nav class="nav" aria-label="プロジェクト">
+        <a href="#intro">自己紹介</a>
+        <a href="#scratch-work">Scratch作品</a>
+        <a href="#cherry-jumping">CherryJumping</a>
+        <a href="#my-os">my_os</a>
+        <a href="#hiyori-ai">ひよりAI</a>
+        <a href="#juicy-puncher">Juicy Puncher</a>
+        <a href="#promptai">pRomptAI</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="intro" class="intro-block" aria-labelledby="intro-title">
+      <h1 id="intro-title">自己紹介</h1>
+      <p class="intro-profile"><strong>プロフィール:</strong> 2012年生まれ。9歳から3年間 Scratch を毎日使い倒し、ロジックの基礎を習得。現在はテキスト言語に移行し、さまざまな言語を学習・活用中です。</p>
+      <p>このページでは、Scratch で制作した作品から、中学生以降に取り組んだゲーム・ツール・実験までをまとめています。</p>
+    </section>
+
+    <h2 class="cards-heading">作品一覧</h2>
+    <p class="embed-note cards-intro">各プロジェクトへジャンプできます。</p>
+
+    <div class="cards" role="navigation" aria-label="プロジェクト一覧">
+      <a class="card" href="#scratch-work">
+        <span class="card__tag">Scratch作品</span>
+        <h2>ニワトリクリッカー</h2>
+        <p>ニワトリ・卵・ショップ</p>
+      </a>
+      <a class="card" href="#cherry-jumping">
+        <span class="card__tag">Game</span>
+        <h2>CherryJumping</h2>
+        <p>遊び方・敵・味方の図鑑</p>
+      </a>
+      <a class="card" href="#my-os">
+        <span class="card__tag">Rust / OS</span>
+        <h2>my_os</h2>
+        <p>5日で作ったターミナル型 OS（HI → Hello!）</p>
+      </a>
+      <a class="card" href="#hiyori-ai">
+        <span class="card__tag">AI / VTuber</span>
+        <h2>ひよりAIシステム</h2>
+        <p>LFM × VOICEVOX × VTube Studio</p>
+      </a>
+      <a class="card" href="#juicy-puncher">
+        <span class="card__tag">Unity</span>
+        <h2>Juicy Puncher</h2>
+        <p>10時間で企画から公開まで</p>
+      </a>
+      <a class="card" href="#promptai">
+        <span class="card__tag">Local LLM</span>
+        <h2>pRomptAI MVP</h2>
+        <p>自然言語から実行環境へ</p>
+      </a>
+    </div>
+
+    <section id="scratch-work" class="project" aria-labelledby="scratch-work-title">
+      <div class="project__header">
+        <h2 id="scratch-work-title">Scratch作品</h2>
+        <p class="lead"><strong>ニワトリクリッカー</strong> — ニワトリと卵をテーマにしたゲームです。下の埋め込みからそのまま遊べます（Scratch 公式サイトの埋め込みです）。</p>
+      </div>
+
+      <div class="scratch-embed">
+        <iframe src="https://scratch.mit.edu/projects/888482251/embed" title="ニワトリクリッカー（Scratch）" width="485" height="402" loading="lazy" allowfullscreen allow="fullscreen"></iframe>
+      </div>
+      <p class="embed-actions"><a href="https://scratch.mit.edu/projects/888482251/" target="_blank" rel="noopener noreferrer">Scratch で別タブを開く</a></p>
+
+      <h3>使い方</h3>
+      <ul>
+        <li>ニワトリをクリックまたはタップすると、卵を産んでくれます。</li>
+        <li>矢印ボタンを押すと下に行けます。</li>
+        <li>ここでは卵が流れて売られます。</li>
+        <li>卵をクリックかタップをすることで磨かれて品質がアップします。</li>
+        <li>最大で 10 回磨くことができます。</li>
+        <li>モニターには、最後に売られた品質と値段が書かれています。</li>
+        <li>黄色のダイヤマークは品質を表しています。</li>
+        <li>卵の色の P で買い物をします。</li>
+        <li>品質が高いほど早く売れます。</li>
+        <li>矢印の隣にあるショップマークを押すと、ショップに行けます。</li>
+        <li>矢印で買うものを選ぶことができます。</li>
+        <li>人のマークのボタンを押すと、ゲーム画面へ移動できます。</li>
+        <li>このゲームは、黒い卵にニワトリが触れると、終了です。</li>
+        <li>やめるボタンを押すことでも終了できます。</li>
+      </ul>
+
+      <h3>メモとクレジット</h3>
+      <ul>
+        <li><strong>音楽:</strong> <a href="https://maoudamashii.jokersounds.com/" target="_blank" rel="noopener noreferrer">魔王魂</a></li>
+        <li><strong>効果音:</strong> <a href="https://soundeffect-lab.info/" target="_blank" rel="noopener noreferrer">効果音ラボ</a></li>
+      </ul>
+    </section>
+
+    <!-- CherryJumping.md -->
+    <section id="cherry-jumping" class="project" aria-labelledby="cherry-jumping-title">
+      <div class="project__header">
+        <p class="project__era">時期: 中学生</p>
+        <h2 id="cherry-jumping-title">CherryJumping</h2>
+        <p class="lead">スペースでジャンプするゲーム — キャラ変更と特殊能力あり。</p>
+      </div>
+
+      <h3>CherryJumping（ブラウザ）</h3>
+      <p class="embed-note">Unity は <code>file://</code> 不可です。<code>PF</code> で <code>./serve.sh</code>（<code>serve.py</code>）を使ってください。アドレスは <strong>http://127.0.0.1:5500/</strong> のように <strong>http</strong> です（<strong>https</strong> だと「データが送信されませんでした」になります）。素の <code>python -m http.server</code> だと MIME 起因のエラーになることがあります。</p>
+      <div class="unity-embed unity-embed--cherry">
+        <iframe src="CherryJumpingWebVer/index.html" title="CherryJumping WebGL" loading="lazy" allow="fullscreen; gamepad"></iframe>
+      </div>
+      <p class="embed-actions"><a href="CherryJumpingWebVer/index.html" target="_blank" rel="noopener noreferrer">別タブで開く</a></p>
+
+      <h3>遊び方</h3>
+      <ul>
+        <li><strong>ジャンプ:</strong> スペースキー</li>
+        <li>キャラクターの種類を変えられます（キャラクターごとに特殊能力あり）</li>
+      </ul>
+
+      <h3>敵図鑑</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>名前</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>Wall</code></td><td>壁（HP -1）</td></tr>
+          <tr><td><code>CircleWall</code></td><td>追ってくる壁（HP -1）</td></tr>
+          <tr><td><code>Teppo</code></td><td>鉄砲（HP -1）</td></tr>
+          <tr><td><code>TeppoBullet</code></td><td>球（HP -1）</td></tr>
+          <tr><td><code>Laser</code></td><td>レーザー（即死）</td></tr>
+          <tr><td><code>Meteorite</code></td><td>隕石（即死）</td></tr>
+        </tbody>
+      </table>
+
+      <h3>味方図鑑</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>名前</th>
+            <th>能力</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><code>Normal</code></td><td>標準</td></tr>
+          <tr><td><code>Yellow</code></td><td>マウスを追う</td></tr>
+          <tr><td><code>Gray</code></td><td>重いが HP と回復が2倍</td></tr>
+          <tr><td><code>Sky</code></td><td>ダメージを受けないが即死攻撃は通る（重力が薄い）</td></tr>
+          <tr><td><code>Pink</code></td><td>ダメージを受けた・回復したとき2倍か無効、通常のどれかを引き当てる</td></tr>
+          <tr><td><code>Purple</code></td><td>球を発射する</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- my_os -->
+    <section id="my-os" class="project" aria-labelledby="my-os-title">
+      <div class="project__header">
+        <p class="project__era">時期: 中学生</p>
+        <p class="badge">AI のコードをベースに組み立てました</p>
+        <h2 id="my-os-title">my_os（ターミナル型 OS）</h2>
+        <p class="lead">約 5 日間で、AI が出した Rust コードをコピペしつつつなぎ合わせ、ブート可能な簡易ターミナル風 OS。キーボードで <code>HI</code> と入力して Enter すると <code>Hello!</code> と返します。</p>
+        <p class="embed-note">ソースは <code>my_os/</code>。<code>target/</code> はビルド生成物のため ZIP・Git には含めません。</p>
+        <div class="project-cta" role="group" aria-label="my_os ダウンロード">
+          <a class="btn-project" href="downloads/my_os-source.zip" download="my_os-source.zip">ZIP をダウンロード</a>
+          <a class="btn-project btn-project--ghost" href="my_os/README.md" target="_blank" rel="noopener noreferrer">README を開く</a>
+        </div>
+      </div>
+
+      <h3>フォルダ構成（ソース）</h3>
+      <pre class="folder-tree">my_os/
+├── Cargo.toml
+├── Cargo.lock
+├── src/
+│   ├── main.rs           … VGA・キーボード・「HI」判定
+│   ├── interrupts.rs
+│   ├── vga_buffer.rs
+│   └── interrputs.rs     （当時のファイル名のまま）
+└── .cargo/config.toml</pre>
+
+      <h3>概要</h3>
+      <table>
+        <tbody>
+          <tr><th scope="row">制作</th><td>中学生のとき · 約 5 日間</td></tr>
+          <tr><th scope="row">言語</th><td>Rust（<code>no_std</code> / x86_64・bootloader）</td></tr>
+          <tr><th scope="row">内容</th><td>VGA テキストモードで入力エコーし、2 文字が <code>HI</code> のとき <code>Hello!</code> を表示</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- AIVtuberを作ろう.md -->
+    <section id="hiyori-ai" class="project" aria-labelledby="hiyori-title">
+      <div class="project__header">
+        <p class="project__era">時期: 中学生</p>
+        <p class="disclaimer" role="note">
+          ※これはAIが書いたので真実ではないものが含まれている可能性があります。やったことはあってます。感想などは全てAIの捏造です。
+        </p>
+        <p class="badge">AIと一緒に開発しました</p>
+        <h2 id="hiyori-title">ひよりAIシステム（Hiyori AI System）</h2>
+        <p class="lead">「2日間で構築した、自律的に思考し語りかける対話エージェント。」LFMによる高速思考と、VTube Studio連携による生命感のある表現を両立。</p>
+        <p class="embed-note">実行用コードは <code>my_aituber/</code> フォルダにあります。ソース一式は ZIP で入手できます（手順は README）。</p>
+        <div class="project-cta" role="group" aria-label="ひよりAI ダウンロード・ドキュメント">
+          <a class="btn-project" href="downloads/my_aituber-source.zip" download="my_aituber-source.zip">ZIP をダウンロード</a>
+          <a class="btn-project btn-project--ghost" href="my_aituber/README.md" target="_blank" rel="noopener noreferrer">README を開く</a>
+          <a class="project-cta__secondary" href="DISTRIBUTION.md" target="_blank" rel="noopener noreferrer">配布の注意</a>
+        </div>
+        <p class="embed-note" role="note"><strong>vts_token.txt について:</strong> VTube Studio の<strong>プラグイン認証トークン</strong>が入るため、<strong>公開用 ZIP には含めていません</strong>。展開後は初回に <code>python main.py</code> を実行し、VTS 側の許可ダイアログで各自がトークンを発行してください。</p>
+      </div>
+
+      <h3>フォルダ構成（配布用の目安）</h3>
+      <p>バージョン管理や ZIP では <code>.venv</code> は含めず、<code>requirements.txt</code> から再インストールしてもらいます。ZIP の再生成は PF ルートで <code>./package-my_aituber.sh</code> です。</p>
+      <pre class="folder-tree">my_aituber/   （ダウンロード ZIP に含まれるもの）
+├── main.py
+├── requirements.txt
+└── README.md
+
+ローカル開発・実行時のみ（ZIP には含めない・自動生成もあり）
+├── .venv/              … 仮想環境（配布禁止）
+├── vts_token.txt       … VTS 認証（秘密情報のため配布しない）
+├── chat_history.db     … 会話ログ（実行時に作成）
+└── temp.wav            … 音声一時ファイル</pre>
+      <p class="embed-note">実行時に自動生成: <code>chat_history.db</code>（会話ログ）、<code>temp.wav</code>（音声一時ファイル）。</p>
+
+      <h3><code>main.py</code> がしていること</h3>
+      <table>
+        <tbody>
+          <tr><th scope="row">LLM</th><td>OpenAI 互換 HTTP API（既定 <code>http://localhost:1235/v1/chat/completions</code>）。ポートは LM Studio 側に合わせて <code>LM_URL</code> を編集。</td></tr>
+          <tr><th scope="row">VOICEVOX</th><td><code>http://localhost:50021</code> で音声合成し、macOS では <code>afplay</code> で再生（他 OS は README 参照）。</td></tr>
+          <tr><th scope="row">VTube Studio</th><td><code>pyvts</code> で接続・認証（<code>vts_token.txt</code>）。テキストから表情ホットキー <code>HAPPY</code> / <code>SAD</code> / <code>SURPRISE</code> を送信。</td></tr>
+          <tr><th scope="row">記憶</th><td>SQLite <code>chat_history.db</code> に直近の発話を保存し、プロンプトに連結。</td></tr>
+          <tr><th scope="row">独り言</th><td>stdin に入力がない間は約 5 秒で自動プロンプトを投入し、自律発話するループ。</td></tr>
+        </tbody>
+      </table>
+
+      <h3>配布について</h3>
+      <ul>
+        <li>サイトの <strong>「ZIP をダウンロード」</strong>は <code>package-my_aituber.sh</code> で作った <strong>ソースのみ</strong>です（<code>main.py</code>・<code>requirements.txt</code>・<code>README.md</code>）。</li>
+        <li><code>.venv</code> は OS 依存のため含みません。</li>
+        <li><code>vts_token.txt</code> は<strong>認証情報が入るため ZIP に含めません</strong>。自分用バックアップとしてローカルにだけ置くのが安全です。</li>
+      </ul>
+
+      <h3>使い方（概要）</h3>
+      <ol class="project-steps">
+        <li>LM Studio（または互換 API）・VOICEVOX・VTube Studio を起動する。</li>
+        <li><code>my_aituber</code> で仮想環境を作り <code>pip install -r requirements.txt</code> する。</li>
+        <li><code>python main.py</code> を実行し、コンソールから入力。終了は <code>exit</code> または <code>さよなら</code>。</li>
+      </ol>
+      <p class="embed-note">ポート番号・Windows での音声再生・VTS ホットキー名のカスタムは <code>main.py</code> / README に記載しています。</p>
+
+      <h3>システムスタック &amp; 構成</h3>
+      <table>
+        <tbody>
+          <tr><th>思考エンジン</th><td><strong>LFM</strong>（Liquid Foundation Model）</td></tr>
+          <tr><th>音声合成</th><td><strong>VOICEVOX</strong>（ローカルOSS / ピッチ制御実装）</td></tr>
+          <tr><th>アバター制御</th><td><strong>VTube Studio API</strong>（WebSocket）</td></tr>
+          <tr><th>記憶保持</th><td><strong>SQLite</strong>（短期・長期文脈の維持）</td></tr>
+          <tr><th>インフラ</th><td>Steam / VTube Studio 環境</td></tr>
+        </tbody>
+      </table>
+
+      <h3>技術的ハイライト</h3>
+
+      <h4>並列実行制御（Multi-Threading &amp; Async）</h4>
+      <p><code>asyncio</code> と <code>threading</code> を組み合わせ、音声出力とモデルのモーション（口パク・動き）の同期を実現。</p>
+
+      <h4>自律的な「独り言モード」</h4>
+      <p>一定時間入力がないと AI が自発的に思考・発話を開始するタイムアウト監視。</p>
+
+      <h4>開発アプローチ</h4>
+      <ul>
+        <li><strong>既存アセットの活用:</strong> Steam 経由の VTube Studio 導入など、既存プラットフォームを統合。</li>
+        <li><strong>AIオーケストレーション:</strong> Gemini を開発パートナーに、2日間で MVP を完遂。</li>
+      </ul>
+
+      <h3>開発ログ</h3>
+      <ul>
+        <li><strong>Day 1:</strong> 思考エンジン（LFM）と音声（VOICEVOX）のパイプライン構築。</li>
+        <li><strong>Day 2:</strong> VTube Studio API 連携によるモーション同期、SQLite による記憶システム。</li>
+      </ul>
+
+      <p class="footnote">Powered by Liquid Intelligence &amp; Creative Engineering.</p>
+    </section>
+
+    <!-- Juicy_Puncher.md -->
+    <section id="juicy-puncher" class="project" aria-labelledby="juicy-title">
+      <div class="project__header">
+        <p class="project__era">時期: 中学生</p>
+        <p class="disclaimer" role="note">
+          ※これはAIが書いたので真実ではないものが含まれている可能性があります。やったことはあってます。感想などは全てAIの捏造です。
+        </p>
+        <p class="badge">AIと一緒に開発しました</p>
+        <h2 id="juicy-title">Juicy Puncher</h2>
+        <p class="lead">「爆速開発、完遂。」企画から公開までを10時間で駆け抜けた、超短期集中プロジェクト。</p>
+      </div>
+
+      <h3>プロジェクト概要</h3>
+      <table>
+        <tbody>
+          <tr><th>開発期間</th><td>約10時間（企画・開発・公開まで）</td></tr>
+          <tr><th>開発体制</th><td>個人開発</td></tr>
+          <tr><th>開発環境</th><td>Unity 6 / AIコパイロット活用</td></tr>
+        </tbody>
+      </table>
+
+      <h3>WebGL（mouhitotu）</h3>
+      <p class="embed-note">上記と同様、<code>./serve.sh</code> 経由で表示してください。</p>
+      <div class="unity-embed unity-embed--mouhitotu">
+        <iframe src="mouhitotuFour/index.html" title="mouhitotu WebGL" loading="lazy" allow="fullscreen; gamepad"></iframe>
+      </div>
+      <p class="embed-actions"><a href="mouhitotuFour/index.html" target="_blank" rel="noopener noreferrer">別タブで開く</a></p>
+
+      <h3>アプローチ</h3>
+      <h4>超短期リリース・ファースト</h4>
+      <p>「完璧よりも完成」をスローガンに、企画時間は約20分。まず世に出すことを最優先。</p>
+
+      <h4>AIとの共同戦線</h4>
+      <p>実装の壁や未知のエラーに対し AI を副操縦士として活用。提示された解を検証・適用して迅速に実装。</p>
+
+      <h3>トラブルシューティング</h3>
+      <ul>
+        <li>
+          <strong>拡張子エラー:</strong> Unity 6 でビルドが <code>.unityweb</code> となりアップロード先で拒否 → 仕様を分析し、手動で拡張子を書き換えて公開。
+        </li>
+        <li>
+          <strong>UIレイアウト:</strong> WebGL ビルド後に Canvas が崩壊 → Canvas 設定とアンカーを見直して復旧。
+        </li>
+      </ul>
+
+      <h3>今後の展望</h3>
+      <blockquote class="lead" style="margin: 1rem 0;">「スピードの先にあるクオリティへ」</blockquote>
+      <ul>
+        <li>デバッグ工程の組み込み（テスト自動化・効率化）。</li>
+        <li>オリジナリティの肉付け（遊び心と独自のゲーム性）。</li>
+      </ul>
+
+      <p class="footnote">Created by AI with Human Direction.</p>
+    </section>
+
+    <!-- pRomptAI_MVP.md -->
+    <section id="promptai" class="project" aria-labelledby="promptai-title">
+      <div class="project__header">
+        <p class="project__era">時期: 中学生</p>
+        <p class="disclaimer" role="note">
+          ※これはAIが書いたので真実ではないものが含まれている可能性があります。やったことはあってます。感想などは全てAIの捏造です。
+        </p>
+        <p class="badge">AIと一緒に開発しました</p>
+        <h2 id="promptai-title">pRomptAI MVP</h2>
+        <p class="lead">「自然言語を、即座に動的な実行環境へ。」ローカルLLMと実行エンジンを融合したインターフェース。</p>
+        <div class="project-cta" role="group" aria-label="pRomptAI の起動">
+          <a class="btn-project" href="pRonptAI/index.html" target="_blank" rel="noopener noreferrer">pRomptAI を開く</a>
+          <a class="project-cta__secondary" href="pRonptAI/edit/" target="_blank" rel="noopener noreferrer">エディタへ直行</a>
+        </div>
+      </div>
+
+      <h3>LM Studio の設定</h3>
+      <ol class="project-steps">
+        <li>LM Studio を起動し、使うチャット用モデルをダウンロードして読み込む（<strong>Load</strong> して推論可能な状態にする）。</li>
+        <li>左の <strong>Developer</strong> または <strong>Local Server</strong>（バージョンにより表記が異なります）を開き、<strong>Start Server</strong> でローカル API サーバーを起動する。</li>
+        <li>API のベース URL はエディタが <code>http://localhost:1234/v1/chat/completions</code> を想定しているため、LM Studio 側の待ち受けポートを <strong>1234</strong> にする（未使用の場合は Settings でポートを 1234 に合わせる、または後述のとおりコード側の URL を変更する）。</li>
+        <li>エンドポイント形式は OpenAI 互換の <code>POST /v1/chat/completions</code> である必要があります（LM Studio のローカルサーバー既定のまま利用で問題ないことが多いです）。</li>
+      </ol>
+
+      <h3>注意点</h3>
+      <ul class="project-cautions">
+        <li>LM Studio のローカルサーバーが<strong>起動していない</strong>と、エディタから AI へ <code>fetch</code> しても応答しません。先に LM Studio 側でサーバーを立ち上げてください。</li>
+        <li>ポートを 1234 以外にした場合は、<code>pRonptAI/edit/js/ai.js</code> の <code>url</code> または <code>pRonptAI/edit2/js/constants.js</code> の <code>endpoint</code> を、実際のベース URL（例: <code>http://localhost:<em>ポート</em>/v1/chat/completions</code>）に書き換えてください。</li>
+        <li>ポートフォリオやエディタを <code>http://127.0.0.1</code> で開き、API が <code>http://localhost</code> のみだと、ブラウザの<strong>オリジンが異なる</strong>扱いになり通信がブロックされることがあります。開けないときは、サイトも LM Studio も <strong>同じホスト表記</strong>（どちらも <code>127.0.0.1</code> またはどちらも <code>localhost</code>）にそろえるか、LM Studio の CORS / サーバー設定を確認してください。</li>
+      </ul>
+
+      <h3>開発マイルストーン</h3>
+      <ul>
+        <li><strong>開発期間:</strong> 約6日間（集中開発フェーズ）</li>
+        <li><strong>コンセプト:</strong> ボイラープレートレスな AI コード実行エコシステム</li>
+        <li><strong>主要技術:</strong> Local LLM（LM Studio）, JavaScript（Async Runtime）, Canvas API</li>
+      </ul>
+
+      <h3>実装済み主要機能</h3>
+
+      <h4>1. AI Interaction &amp; Compilation</h4>
+      <ul>
+        <li><strong>LM Studio Integration:</strong> ローカル完結の LLM 対話。</li>
+        <li><strong>Auto-Compiler:</strong> 自然言語を実行可能な JavaScript にコンパイル。</li>
+      </ul>
+
+      <h4>2. Robust Execution Engine</h4>
+      <ul>
+        <li><strong>Runtime Control:</strong> <code>new Function</code> と非同期で実行・停止を制御。</li>
+        <li><strong>Implicit Context:</strong> <code>executionState</code> 等を前提に、本質的なロジックだけを生成しやすく。</li>
+      </ul>
+
+      <h4>3. Interactive Ecosystem</h4>
+      <ul>
+        <li><strong>Canvas System:</strong> 生成コードからグラフィックスを制御。</li>
+        <li><strong>Input Detection:</strong> キーボード入力を生成コードへ同期。</li>
+      </ul>
+
+      <h4>4. Advanced Prompt Engineering</h4>
+      <ul>
+        <li><strong>Behavioral Constraint:</strong> 冗長な解説を抑え、コード純度を高めるプロンプト。</li>
+      </ul>
+
+      <h3>技術的なこだわり</h3>
+      <p>AI に「何を書かせるか」だけでなく、「最も書きやすい環境」を作ることに注力。実行コンテキストの設計でハルシネーションや構文エラーを抑える。</p>
+
+      <p class="footnote">Developed with Passion and AI Collaboration.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>ソース: PF フォルダ内の Markdown（CherryJumping.md ほか）を HTML に整形しています。</p>
+    <p class="site-footer__meta"><a href="CREDITS.md">クレジット・第三者コンポーネント</a> · <a href="DISTRIBUTION.md">配布時の注意</a></p>
+  </footer>
+
+  <script>
+    (function () {
+      if (location.protocol !== "file:") return;
+
+      var banner = document.createElement("div");
+      banner.className = "file-protocol-banner";
+      banner.setAttribute("role", "alert");
+      banner.innerHTML =
+        "<strong>いまは file:// で開いています。</strong> Unity WebGL はブラウザの仕様でこのままでは動きません。" +
+        " <code>PF</code> フォルダで <code>./serve.sh</code> を実行するか、macOS なら <code>serve.command</code> をダブルクリックし、" +
+        ' <a href="http://127.0.0.1:5500/index.html">http://127.0.0.1:5500/index.html</a> を開いてください（<strong>https ではない</strong>）。';
+
+      var skip = document.querySelector(".skip-link");
+      if (skip && skip.parentNode) {
+        skip.parentNode.insertBefore(banner, skip.nextSibling);
+      } else {
+        document.body.insertBefore(banner, document.body.firstChild);
+      }
+
+      var phHtml =
+        "<p><strong>file:// では Unity を読み込めません。</strong></p>" +
+        "<p>ターミナル: <code>cd PF</code> → <code>chmod +x serve.sh</code> → <code>./serve.sh</code><br />" +
+        "その後 <a href=\"http://127.0.0.1:5500/index.html\">http://127.0.0.1:5500/index.html</a>（http のみ）</p>" +
+        "<p style=\"font-size:0.8rem;opacity:0.85\">サーバーで開いても失敗する場合は、Unity の WebGL ビルド出力フォルダ一式（<code>Build/*.unityweb</code> など）が <code>Build</code> に揃っているか確認してください。</p>";
+
+      document.querySelectorAll(".unity-embed iframe").forEach(function (iframe) {
+        var wrap = iframe.closest(".unity-embed");
+        if (!wrap) return;
+        iframe.remove();
+        var ph = document.createElement("div");
+        ph.className = "unity-embed-placeholder";
+        ph.innerHTML = phHtml;
+        wrap.appendChild(ph);
+      });
+    })();
+  </script>
+</body>
+</html>

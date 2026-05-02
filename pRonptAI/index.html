@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pRomptAI - AIと創る、次世代コードエディタ</title>
+    <style>
+        :root {
+            --primary-color: #6200ee;
+            --bg-color: #0f172a;
+            --text-color: #f8fafc;
+        }
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero {
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -2px;
+            background: linear-gradient(45deg, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+        }
+        .btn-launch {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background: var(--primary-color);
+            border-radius: 50px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 15px rgba(98, 0, 238, 0.4);
+        }
+        .btn-launch:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(98, 0, 238, 0.6);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>pRomptAI</h1>
+        <p>あなたの言葉が、その場でJavaScriptに変わる。</p>
+        <a href="./edit/" class="btn-launch">エディタを起動する</a>
+    </div>
+
+</body>
+</html>

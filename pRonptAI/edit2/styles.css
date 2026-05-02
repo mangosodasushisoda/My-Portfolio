@@ -1,0 +1,170 @@
+:root {
+  --bg: #0b1220;
+  --panel: #111a2d;
+  --line: #26344f;
+  --text: #e5e7eb;
+  --muted: #94a3b8;
+  --accent: #6366f1;
+  --ok: #22c55e;
+  --err: #ef4444;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 300px 1fr 360px;
+  gap: 12px;
+  height: 100vh;
+  padding: 12px;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.chat-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-panel h2,
+.stage-panel h2 {
+  margin: 0;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.chat-log {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.chat-log pre {
+  background: #0b1220;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  overflow: auto;
+}
+
+#chatInput {
+  width: calc(100% - 16px);
+  margin: 8px;
+  height: 90px;
+  background: #0b1220;
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  resize: none;
+  padding: 10px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+  padding: 0 12px 12px;
+}
+
+.editor-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  border-bottom: 1px solid var(--line);
+  padding: 12px;
+}
+
+.editor-header h1 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: white;
+  background: var(--accent);
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #475569;
+  cursor: not-allowed;
+}
+
+#codeEditor {
+  flex: 1;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: #0b1220;
+  color: #dbeafe;
+  font-size: 14px;
+  line-height: 1.45;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  padding: 12px;
+}
+
+.output-log {
+  margin: 0;
+  min-height: 130px;
+  max-height: 200px;
+  overflow: auto;
+  background: #020617;
+  border-top: 1px solid var(--line);
+  padding: 10px;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+.stage-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+#runnerFrame {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: black;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.log-ok {
+  color: var(--ok);
+}
+
+.log-err {
+  color: var(--err);
+}
