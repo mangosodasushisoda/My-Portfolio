@@ -16,3 +16,43 @@ my_os/.git/
 .DS_Store
 *.log
 *.tmp
+
+# === Unity（プロジェクトファイル用） ===
+# これを入れないと、数GBの不要ファイルがGitHubに飛んでいって地獄を見ます
+[Uu]nity-game-*/[Library]/
+[Uu]nity-game-*/[Temp]/
+[Uu]nity-game-*/[Obj]/
+[Uu]nity-game-*/[Build]/
+[Uu]nity-game-*/[Logs]/
+[Uu]nity-game-*/[MemoryCaptures]/
+# Unityが生成する一時的なプロジェクトファイル
+[Uu]nity-game-*/Assets/AssetStoreTools*
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svclog
+*.pdb
+*.opendb
+*.IDB
+
+# === 環境変数（将来のAPI利用に備えて） ===
+.env
+.env.local
+.env.*.local
+# バックアップファイルなども一応弾く
+*.env.bak
+
+# === AI Vtuber / Python 追加分 ===
+# ローカルAIでもモデルのキャッシュなどが巨大になる場合があるため
+**/__pycache__/
+*.py[cod]
+*$py.class
+# モデルファイル（.pth や .onnx）が重すぎる場合はここに入れる
+# *.pth
+# *.onnx
